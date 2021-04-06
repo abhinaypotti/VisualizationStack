@@ -1,0 +1,191 @@
+<div id="glowscript" class="glowscript">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link type="text/css" href="https://www.glowscript.org/css/redmond/2.1/jquery-ui.custom.css" rel="stylesheet" />
+<link type="text/css" href="https://www.glowscript.org/css/ide.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/package/glow.3.0.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/package/RSrun.3.0.min.js"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+// START JAVASCRIPT
+;(function() {;
+var line1, line2, i, pos, a, b, j;
+async function __main__() {
+"use strict";
+
+    var version, display, vector, print, arange, __name__, type, scene, RS_ls, c1, c2, c3, pos, a, b, line1, line2, i, j;
+    version = RS_list_decorate([ "3.0", "glowscript" ]);
+    Array.prototype['+'] = function(r) {return this.concat(r)}
+    Array.prototype['*'] = function(r) {return __array_times_number(this, r)}
+    window.__GSlang = "vpython";
+    display = canvas;
+    vector = vec;
+    print = GSprint;
+    arange = range;
+    __name__ = "__main__";
+    type = pytype;
+    scene = canvas();
+    "4";
+    c1 = curve(vector(.2["-u"](), 1["-u"](), 0), vector(.2, 1["-u"](), 0));
+    "5";
+    RS_interpolate_kwargs.call(c1, c1.rotate, [RS_desugar_kwargs({angle: 3["*"](pi)["/"](2), axis: vec(0, 0, 1)})]);
+    "6";
+    c2 = curve(vector(.2["-u"](), 1["-u"](), 0), vector(.2["-u"](), .05, 0));
+    "7";
+    RS_interpolate_kwargs.call(c2, c2.rotate, [RS_desugar_kwargs({angle: 3["*"](pi)["/"](2), axis: vec(0, 0, 1)})]);
+    "8";
+    c3 = curve(vector(.2, 1["-u"](), 0), vector(.2, .05, 0));
+    "9";
+    RS_interpolate_kwargs.call(c3, c3.rotate, [RS_desugar_kwargs({angle: 3["*"](pi)["/"](2), axis: vec(0, 0, 1)})]);
+    "11";
+    pos = vector(.8["-u"](), 0, 0);
+    "12";
+    a = vector(.2["-u"](), .05, 0);
+    "13";
+    b = vector(.2, .05, 0);
+    "14";
+    line1 = vector(.2["-u"](), .7["-u"](), 0);
+    "15";
+    line2 = vector(.2, .7["-u"](), 0);
+    "16";
+    i = 0;
+    "17";
+    j = 0;
+    "19";
+    async function ShowSphere(evt) {
+        var RS_ls, pointer, label1, sphere1, c, d, c4, c5;
+        "20";
+        "21";
+        "22";
+        "23";
+        "24";
+        print("Enqueuing the element..");
+        "26";
+        if (i[">="](1)) {
+            "27";
+            i = i["+"](1);
+            "28";
+            pointer = RS_interpolate_kwargs.call(this, arrow, [RS_desugar_kwargs({pos: pos, axis: vector(0, 1["-u"](), 0), shaftwidth: .01, color: color.black, opacity: 1})]);
+            "29";
+            label1 = RS_interpolate_kwargs.call(this, label, [RS_desugar_kwargs({pos: pos["+"](vector(0, 1["-u"](), 0)), text: "Tail", color: color.black, opacity: 1, box: false})]);
+            "31";
+            pos = pos["+"](vector(.25, 0, 0));
+            "32";
+            sphere1 = RS_interpolate_kwargs.call(this, sphere, [RS_desugar_kwargs({pos: pos, radius: .06, color: color.cyan})]);
+            "33";
+            pointer = RS_interpolate_kwargs.call(this, arrow, [RS_desugar_kwargs({pos: pos, axis: vector(0, 1["-u"](), 0), shaftwidth: .01})]);
+            "34";
+            label1 = RS_interpolate_kwargs.call(this, label, [RS_desugar_kwargs({pos: pos["+"](vector(0, 1["-u"](), 0)), text: "Tail", box: false})]);
+            "36";
+            line1 = line1["-"](vector(0, .25["-u"](), 0));
+            "37";
+            line2 = line2["-"](vector(0, .25["-u"](), 0));
+            "38";
+            c = curve(line1, line2);
+            "39";
+            RS_interpolate_kwargs.call(c, c.rotate, [RS_desugar_kwargs({angle: 3["*"](pi)["/"](2), axis: vec(0, 0, 1)})]);
+            "41";
+            if (RS_equals(i["%"](4), 0)) {
+                "42";
+                "43";
+                "44";
+                c = a;
+                "45";
+                d = b;
+                "46";
+                a = a["+"](vector(0, 1, 0));
+                "47";
+                b = b["+"](vector(0, 1, 0));
+                "48";
+                c4 = curve(c, a);
+                "49";
+                RS_interpolate_kwargs.call(c4, c4.rotate, [RS_desugar_kwargs({angle: 3["*"](pi)["/"](2), axis: vec(0, 0, 1)})]);
+                "50";
+                c5 = curve(d, b);
+                "51";
+                RS_interpolate_kwargs.call(c5, c5.rotate, [RS_desugar_kwargs({angle: 3["*"](pi)["/"](2), axis: vec(0, 0, 1)})]);
+                "54";
+            }
+        } else if ((i === 0 || typeof i === "object" && RS_equals(i, 0))) {
+            "55";
+            i = 1;
+            "56";
+            sphere1 = RS_interpolate_kwargs.call(this, sphere, [RS_desugar_kwargs({pos: pos, radius: .06, color: color.cyan})]);
+            "58";
+            pointer = RS_interpolate_kwargs.call(this, arrow, [RS_desugar_kwargs({pos: pos, axis: vector(0, 1["-u"](), 0), shaftwidth: .01})]);
+            "59";
+            label1 = RS_interpolate_kwargs.call(this, label, [RS_desugar_kwargs({pos: pos["+"](vector(0, 1["-u"](), 0)), text: "Tail", box: false})]);
+            "61";
+            c = curve(vector(.2["-u"](), .7["-u"](), 0), vector(.2, .7["-u"](), 0));
+            "62";
+            RS_interpolate_kwargs.call(c, c.rotate, [RS_desugar_kwargs({angle: 3["*"](pi)["/"](2), axis: vec(0, 0, 1)})]);
+            "64";
+            pointer = RS_interpolate_kwargs.call(this, arrow, [RS_desugar_kwargs({pos: pos, axis: vector(0, 1, 0), shaftwidth: .01})]);
+            "65";
+            label1 = RS_interpolate_kwargs.call(this, label, [RS_desugar_kwargs({pos: pos["+"](vector(0, 1, 0)), text: "Head", box: false})]);
+        }
+    };
+    if (!ShowSphere.__argnames__) Object.defineProperties(ShowSphere, {
+        __argnames__ : {value: ["evt"]},
+        __module__ : {value: "__main__"}
+    });
+
+    "70";
+    async function HideSphere(evt) {
+        var RS_ls, sphere1, pointer, label1;
+        "71";
+        print("Dequeuing the element..");
+        "72";
+        "73";
+        "75";
+        if (i[">"](1) & j["<"](i["-"](1))) {
+            "76";
+            sphere1 = RS_interpolate_kwargs.call(this, sphere, [RS_desugar_kwargs({pos: vec(.8["-u"]()["+"](.25["*"](j)), 0, 0), radius: .06, color: color.black, opacity: 1})]);
+            "77";
+            pointer = RS_interpolate_kwargs.call(this, arrow, [RS_desugar_kwargs({pos: vec(.8["-u"]()["+"](.25["*"](j)), 0, 0), axis: vector(0, 1, 0), shaftwidth: .01, color: color.black, opacity: 1})]);
+            "78";
+            label1 = RS_interpolate_kwargs.call(this, label, [RS_desugar_kwargs({pos: vec(.8["-u"]()["+"](.25["*"](j)), 1, 0), text: "Head", color: color.black, opacity: 1, box: false})]);
+            "80";
+            j = j["+"](1);
+            "81";
+            pointer = RS_interpolate_kwargs.call(this, arrow, [RS_desugar_kwargs({pos: vec(.8["-u"]()["+"](.25["*"](j)), 0, 0), axis: vector(0, 1, 0), shaftwidth: .01})]);
+            "82";
+            label1 = RS_interpolate_kwargs.call(this, label, [RS_desugar_kwargs({pos: vec(.8["-u"]()["+"](.25["*"](j)), 1, 0), text: "Head", box: false})]);
+            "85";
+        } else {
+            "86";
+            sphere1 = RS_interpolate_kwargs.call(this, sphere, [RS_desugar_kwargs({pos: vec(.8["-u"]()["+"](.25["*"](j)), 0, 0), radius: .06, color: color.black, opacity: 1})]);
+            "87";
+            pointer = RS_interpolate_kwargs.call(this, arrow, [RS_desugar_kwargs({pos: vec(.8["-u"]()["+"](.25["*"](j)), 0, 0), axis: vector(0, 1, 0), shaftwidth: .01, color: color.black, opacity: 1})]);
+            "88";
+            label1 = RS_interpolate_kwargs.call(this, label, [RS_desugar_kwargs({pos: vec(.8["-u"]()["+"](.25["*"](j)), 1, 0), text: "Head", color: color.black, opacity: 1, box: false})]);
+            "89";
+            label1 = RS_interpolate_kwargs.call(this, label, [RS_desugar_kwargs({pos: vec(.8["-u"]()["+"](.25["*"](j)), 1["-u"](), 0), text: "Tail", color: color.black, opacity: 1, box: false})]);
+            "90";
+            pointer = RS_interpolate_kwargs.call(this, arrow, [RS_desugar_kwargs({pos: vec(.8["-u"]()["+"](.25["*"](j)), 0, 0), axis: vector(0, 1["-u"](), 0), shaftwidth: .01, color: color.black, opacity: 1})]);
+        }
+    };
+    if (!HideSphere.__argnames__) Object.defineProperties(HideSphere, {
+        __argnames__ : {value: ["evt"]},
+        __module__ : {value: "__main__"}
+    });
+
+    "93";
+    RS_interpolate_kwargs.call(this, button, [RS_desugar_kwargs({bind: ShowSphere, text: "Enqueue"})]);
+    "94";
+    scene.append_to_caption("\n\n");
+    "96";
+    RS_interpolate_kwargs.call(this, button, [RS_desugar_kwargs({bind: HideSphere, text: "Dequeue"})]);
+    "97";
+    scene.append_to_caption("\n\n");
+};
+if (!__main__.__module__) Object.defineProperties(__main__, {
+    __module__ : {value: "__main__"}
+});
+
+;$(function(){ window.__context = { glowscript_container: $("#glowscript").removeAttr("id") }; __main__() })})()
+// END JAVASCRIPT
+
+//--><!]]></script>
+</div>
